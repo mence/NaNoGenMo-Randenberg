@@ -49,13 +49,14 @@ func printSlice(slice []string) {
     }
 }
 func main() {
-    rand.Seed(42)
+    rand.Seed(12345)
 
     fileRead("resources/01_pride-and-prejudice.txt")
     fileRead("resources/02_adventures-of-huckleberry-finn.txt")
     fileRead("resources/03_the-yellow-wallpaper.txt")
     fileRead("resources/04_alices-adventures-in-wonderland.txt")
     fileRead("resources/05_the-adventures-of-sherlock-holmes.txt")
+    fileRead("resources/16_moby-dick.txt")
 
     printSlice(sentences)
 }
