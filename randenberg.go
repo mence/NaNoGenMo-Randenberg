@@ -42,7 +42,7 @@ func fileRead(file string) {
     }
 }
 
-func PrintSlice(slice []string) {
+func printSlice(slice []string) {
     rand.Seed(42)
     for i := 0; i < len(slice); i++ {
         r := rand.Intn(linecount)
@@ -56,5 +56,5 @@ func main() {
     fileRead("resources/04_alices-adventures-in-wonderland.txt")
     fileRead("resources/05_the-adventures-of-sherlock-holmes.txt")
 
-    PrintSlice(sentences)
+    printSlice(sentences)
 }
