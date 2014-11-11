@@ -43,13 +43,14 @@ func fileRead(file string) {
 }
 
 func printSlice(slice []string) {
-    rand.Seed(42)
     for i := 0; i < len(slice); i++ {
         r := rand.Intn(linecount)
         fmt.Printf("%s\r\n", slice[r])
     }
 }
 func main() {
+    rand.Seed(42)
+
     fileRead("resources/01_pride-and-prejudice.txt")
     fileRead("resources/02_adventures-of-huckleberry-finn.txt")
     fileRead("resources/03_the-yellow-wallpaper.txt")
