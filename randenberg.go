@@ -9,9 +9,8 @@ import (
     "math/rand"
 )
 
-var bytefile []string
-var linecount int = 0
 var sentences []string
+var linecount int = 0
 
 func fileRead(file string) {
     f, err := os.Open(file)
@@ -37,7 +36,7 @@ func fileRead(file string) {
         }
 
         if string(line) != "" {
-            bytefile = append(bytefile, string(line))
+            sentences = append(sentences, string(line))
             linecount += 1
         }
     }
@@ -57,5 +56,5 @@ func main() {
     fileRead("resources/04_alices-adventures-in-wonderland.txt")
     fileRead("resources/05_the-adventures-of-sherlock-holmes.txt")
 
-    PrintSlice(bytefile)
+    PrintSlice(sentences)
 }
